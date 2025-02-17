@@ -5,10 +5,86 @@
     <meta name="author" content="Anna">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katharine Hepburn</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: justify;
+        }
+        a {
+            color: blue;
+        }
+        h1 {
+            text-align: center;
+            color: darkred;
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #555;
+            color: white;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Katharine Hepburn</h1>
-    <p>Katharine Hepburn is one of the greatest actresses of classic Hollywood. She won a record four Academy Awards for Best Actress and was known for her independence and strong will.</p>
-    <a href="index.html">Back to the main page</a>
+    
+    <img src="images/Katharine_Hepburn_portrait.jpg" alt="Katharine Hepburn" width="300">
+    
+    <p><font size="4" color="darkblue">Katharine Hepburn is a Hollywood legend. She is known for her independence, 
+        strong will and unique style of acting. She won a record four Oscars.</font></p>
+    
+    <p><b>The most famous films:</b></p>
+    <ul type="circle">
+        <li>The Philadelphia Story</li>
+        <li>Guess Who's Coming to Dinner</li>
+        <li>The Lion in Winter</li>
+    </ul>
+    
+    <p><i>Catherine left an indelible mark on the history of cinema.</i></p>
+    
+    <a href="#table">Go to the table</a> | 
+    <a href="Bette_Davis.html">Go to the Bette Davis page</a> | 
+    <a href="https://en.wikipedia.org/wiki/Katharine_Hepburn" target="_blank">Read more in Wikipedia</a>
+    
+    <h2 id="table">Filmography</h2>
+    <table>
+        <colgroup>
+            <col style="width: 33%;">
+            <col style="width: 33%;">
+            <col style="width: 33%;">
+        </colgroup>
+        <tr>
+            <th>Poster</th>
+            <th>Movie</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td><img src="images/The Philadelphia Story.jpg" 
+                     alt="The Philadelphia Story" width="100"></td>
+            <td><a href="https://www.imdb.com/title/tt0032904/" target="_blank">The Philadelphia Story</a></td>
+            <td>1940</td>
+        </tr>
+        <tr>
+            <td><img src="images/The_Lion_in_Winter.webp" 
+                     alt="The Lion in Winter" width="100"></td>
+            <td><a href="https://www.imdb.com/title/tt0063227/" target="_blank">The Lion in Winter</a></td>
+            <td>1968</td>
+        </tr>
+    </table>
+    
+    <h2>Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yHO4OsXTPVU?si=SW9m_SyZryD1AM-o" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
 </body>
 </html>
