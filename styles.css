@@ -70,7 +70,19 @@ ol {
     list-style-type: decimal;
 }
 
+.film-list > li {
+    color: #65645e;
+}
+
 .special-text {
     font-size: 18px;
     color: darkblue;
+}
+
+#table p {
+    color: rgb(142, 133, 133);
+}
+
+h2 + p {
+    font-weight: bold;
 }
