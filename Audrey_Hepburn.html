@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Audrey Hepburn</h1>
+    <h1 style="color: darkred; text-align: center;">Audrey Hepburn</h1>
     
     <img src="images/Audrey_Hepburn_portrait.jpg" alt="Audrey Hepburn" class="main-img">
     
@@ -27,32 +27,45 @@
     <a href="Bette_Davis.html">Go to the Bette Davis page</a> | 
     <a href="https://en.wikipedia.org/wiki/Audrey_Hepburn" target="_blank">Read more in Wikipedia</a>
     
-    <h2 id="table">Filmography</h2>
-    <p>Here is a list of some of Audrey Hepburn's most famous films.</p>
-    <table>
+    <div class="table">
+        <h2>Filmography</h2>
+        <p>Here is a list of some of Audrey Hepburn's most famous films.</p>
+          <table>
         <colgroup>
+            <col>
             <col>
             <col>
             <col>
         </colgroup>
         <tr>
-            <th>Poster</th>
-            <th>Movie</th>
+            <th rowspan="2">Poster</th>
+            <th rowspan="2">Movie</th>
+            <th colspan="2">Details</th>
+        </tr>
+        <tr>
             <th>Year</th>
+            <th>Awards</th>
         </tr>
         <tr>
-            <td><img src="images/Breakfast at Tiffany's.jpg" 
-                     alt="Breakfast at Tiffany's" class="table img"></td>
-            <td><a href="https://www.imdb.com/title/tt0054698/" target="_blank">Breakfast at Tiffany's</a></td>
-            <td>1961</td>
+            <td rowspan="2"><img src="images/Breakfast at Tiffany's.jpg" alt="Breakfast at Tiffany's" width="100"></td>
+            <td class="left-align"><a href="https://www.imdb.com/title/tt0054698/" target="_blank">Breakfast at Tiffany's</a></td>
+            <td class="center-align">1961</td>
+            <td class="right-align">Oscar Nomination</td>
         </tr>
         <tr>
-            <td><img src="images/Roman_Holiday.jpg" 
-                     alt="Roman Holiday" class="table img"></td>
-            <td><a href="https://www.imdb.com/title/tt0046250/" target="_blank">Roman Holiday</a></td>
-            <td>1953</td>
+            <td colspan="3" class="center-align"><i>One of the most iconic movies of Audrey Hepburn</i></td>
+        </tr>
+        <tr>
+            <td rowspan="2"><img src="images/Roman_Holiday.jpg" alt="Roman Holiday" width="100"></td>
+            <td class="left-align"><a href="https://www.imdb.com/title/tt0046250/" target="_blank">Roman Holiday</a></td>
+            <td class="center-align">1953</td>
+            <td class="right-align">Oscar Winner</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="center-align"><i>The film that made Audrey Hepburn a star</i></td>
         </tr>
     </table>
+    </div>
     
     <h2>Video</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/juGZaHPwUaU?si=mAsGoFv5e76bxBgD" 

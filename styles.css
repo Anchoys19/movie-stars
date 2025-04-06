@@ -79,8 +79,8 @@ ol {
     color: darkblue;
 }
 
-#table p {
-    color: rgb(142, 133, 133);
+.table p {
+    color: rgb(64, 14, 133);
 }
 
 h2 + p {
