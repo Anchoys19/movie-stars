@@ -8,57 +8,80 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Bette Davis</h1>
+    <div class="container">
+        <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="Katharine_Hepburn.html">Katharine Hepburn</a>
+            <a href="Audrey_Hepburn.html">Audrey Hepburn</a>
+        </div>
 
-    <img src="images/Bette_Davis_portrait.jpg" alt="Bette Davis" class="main-img">
-
-    <p>Bette Davis was one of the most prominent actresses in Hollywood. 
-        She won two Oscars and left a lasting mark on cinema.</p>
-    
-    <p><b>The most famous films:</b></p>
-    <ul class="film-list">
-        <li>All About Eve</li>
-        <li>Jezebel</li>
-        <li>Now, Voyager</li>
-    </ul>
-    
-    <p><i>Bette Davis was known for her unique acting and unforgettable characters.</i></p>
-    
-    <a href="index.html">Back to the main page</a> | 
-    <a href="Audrey_Hepburn.html">Go to the Audrey Hepburn page</a> | 
-    <a href="https://en.wikipedia.org/wiki/Bette_Davis" target="_blank">Read more in Wikipedia</a>
-    
-    <h2 class="table">Filmography</h2>
-    <p>Here is a list of some of Bette Davis's most famous films.</p>
-    <table>
-        <colgroup>
-            <col>
-            <col>
-            <col>
-        </colgroup>
-        <tr>
-            <th>Poster</th>
-            <th>Movie</th>
-            <th>Year</th>
-        </tr>
-        <tr>
-            <td><img src="images/All_About_Eve.jpg" 
-                     alt="All About Eve" class="table img"></td>
-            <td><a href="https://www.imdb.com/title/tt0042192/" target="_blank">All About Eve</a></td>
-            <td>1950</td>
-        </tr>
-        <tr>
-            <td><img src="images/Jezebel.jpg" 
-                     alt="Jezebel" class="table img"></td>
-            <td><a href="https://www.imdb.com/title/tt0030287/" target="_blank">Jezebel</a></td>
-            <td>1938</td>
-        </tr>
-    </table>
-    
-    <h2>Video</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/aRsl10dSk6s?si=CjeXfekjDwgA_sC8" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="header">
+            <h1>Bette Davis</h1>
+        </div>
+        
+        <div class="content-section">
+            <div class="main-img-container">
+                <img src="images/Bette_Davis_portrait.jpg" alt="Bette Davis" class="main-img">
+            </div>
+            
+            <p>Bette Davis was one of the most prominent actresses in Hollywood.
+            She won two Oscars and left a lasting mark on cinema.</p>
+            
+            <p><b>The most famous films:</b></p>
+            <ul class="film-list">
+                <li>All About Eve</li>
+                <li>Jezebel</li>
+                <li>Now, Voyager</li>
+            </ul>
+            
+            <div class="quote">
+                <p>Bette Davis was known for her unique acting and unforgettable characters.</p>
+            </div>
+            
+            <div class="table-container">
+                <h2>Filmography</h2>
+                <p>Here is a list of some of Bette Davis's most famous films.</p>
+                
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tr>
+                        <th>Poster</th>
+                        <th>Movie</th>
+                        <th>Year</th>
+                    </tr>
+                    <tr>
+                        <td><img src="images/All_About_Eve.jpg" 
+                                alt="All About Eve" width="100"></td>
+                        <td class="left-align"><a href="https://www.imdb.com/title/tt0042192/" target="_blank">All About Eve</a></td>
+                        <td class="center-align">1950</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/Jezebel.jpg" 
+                                alt="Jezebel" width="100"></td>
+                        <td class="left-align"><a href="https://www.imdb.com/title/tt0030287/" target="_blank">Jezebel</a></td>
+                        <td class="center-align">1938</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h2>Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/aRsl10dSk6s?si=CjeXfekjDwgA_sC8" 
+                    title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span>Navigation: </span>
+            <a href="index.html">Back to the main page</a> |
+            <a href="Audrey_Hepburn.html">Go to the Audrey Hepburn page</a> |
+            <a href="https://en.wikipedia.org/wiki/Bette_Davis" target="_blank">Read more in Wikipedia</a>
+        </div>
+    </div>
 </body>
 </html>
-

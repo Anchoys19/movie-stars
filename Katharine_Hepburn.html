@@ -8,57 +8,80 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Katharine Hepburn</h1>
-    
-    <img src="images/Katharine_Hepburn_portrait.jpg" alt="Katharine Hepburn" class="main-img">
-    
-    <p>Katharine Hepburn is a Hollywood legend. She is known for her independence, 
-        strong will and unique style of acting. She won a record four Oscars.</p>
-    
-    <p><b>The most famous films:</b></p>
-    <ul class="film-list">
-        <li>The Philadelphia Story</li>
-        <li>Guess Who's Coming to Dinner</li>
-        <li>The Lion in Winter</li>
-    </ul>
-    
-    <p><i>Catherine left an indelible mark on the history of cinema.</i></p>
-    
-    <a href="#table">Go to the table</a> | 
-    <a href="Bette_Davis.html">Go to the Bette Davis page</a> | 
-    <a href="https://en.wikipedia.org/wiki/Katharine_Hepburn" target="_blank">Read more in Wikipedia</a>
-    
-    <h2 class="table">Filmography</h2>
-    <p>Here is a list of some of Katharine Hepburn's most famous films.</p>
-    <table>
-        <colgroup>
-            <col>
-            <col>
-            <col>
-        </colgroup>
-        <tr>
-            <th>Poster</th>
-            <th>Movie</th>
-            <th>Year</th>
-        </tr>
-        <tr>
-            <td><img src="images/The Philadelphia Story.jpg" 
-                     alt="The Philadelphia Story" class="table img"></td>
-            <td><a href="https://www.imdb.com/title/tt0032904/" target="_blank">The Philadelphia Story</a></td>
-            <td>1940</td>
-        </tr>
-        <tr>
-            <td><img src="images/The_Lion_in_Winter.webp" 
-                     alt="The Lion in Winter" class="table img"></td>
-            <td><a href="https://www.imdb.com/title/tt0063227/" target="_blank">The Lion in Winter</a></td>
-            <td>1968</td>
-        </tr>
-    </table>
-    
-    <h2>Video</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/yHO4OsXTPVU?si=SW9m_SyZryD1AM-o" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
+    <div class="container">
+        <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="Bette_Davis.html">Bette Davis</a>
+            <a href="Audrey_Hepburn.html">Audrey Hepburn</a>
+        </div>
+
+        <div class="header">
+            <h1>Katharine Hepburn</h1>
+        </div>
+        
+        <div class="content-section">
+            <div class="main-img-container">
+                <img src="images/Katharine_Hepburn_portrait.jpg" alt="Katharine Hepburn" class="main-img">
+            </div>
+            
+            <p>Katharine Hepburn is a Hollywood legend. She is known for her independence,
+            strong will and unique style of acting. She won a record four Oscars.</p>
+            
+            <p><b>The most famous films:</b></p>
+            <ul class="film-list">
+                <li>The Philadelphia Story</li>
+                <li>Guess Who's Coming to Dinner</li>
+                <li>The Lion in Winter</li>
+            </ul>
+            
+            <div class="quote">
+                <p>Catherine left an indelible mark on the history of cinema.</p>
+            </div>
+            
+            <div class="table-container" id="table">
+                <h2>Filmography</h2>
+                <p>Here is a list of some of Katharine Hepburn's most famous films.</p>
+                
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tr>
+                        <th>Poster</th>
+                        <th>Movie</th>
+                        <th>Year</th>
+                    </tr>
+                    <tr>
+                        <td><img src="images/The Philadelphia Story.jpg" 
+                                alt="The Philadelphia Story" width="100"></td>
+                        <td class="left-align"><a href="https://www.imdb.com/title/tt0032904/" target="_blank">The Philadelphia Story</a></td>
+                        <td class="center-align">1940</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/The_Lion_in_Winter.webp" 
+                                alt="The Lion in Winter" width="100"></td>
+                        <td class="left-align"><a href="https://www.imdb.com/title/tt0063227/" target="_blank">The Lion in Winter</a></td>
+                        <td class="center-align">1968</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h2>Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/yHO4OsXTPVU?si=SW9m_SyZryD1AM-o" 
+                    title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span>Navigation: </span>
+            <a href="index.html">Back to the main page</a> |
+            <a href="Bette_Davis.html">Go to the Bette Davis page</a> |
+            <a href="https://en.wikipedia.org/wiki/Katharine_Hepburn" target="_blank">Read more in Wikipedia</a>
+        </div>
+    </div>
 </body>
 </html>
