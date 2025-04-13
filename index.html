@@ -1,38 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Anna">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hollywood Legends</title>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="author" content="Anna">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Hollywood Legends</title>     
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="nav-menu">
-            <a href="Katharine_Hepburn.html">Katharine Hepburn</a>
-            <a href="Bette_Davis.html">Bette Davis</a>
-            <a href="Audrey_Hepburn.html">Audrey Hepburn</a>
-        </div>
-
-        <div class="header">
-            <h1>Hollywood Legends</h1>
-        </div>
-        
-        <div class="content-section">
-            <p>Welcome to our tribute to some of the greatest Hollywood legends of all time. 
-            Explore the pages to learn more about these iconic actresses who shaped the 
-            history of cinema.</p>
+    <script src="dialog.js"></script>
+    <script>
+        // Internal script
+        window.onload = function() {
+            // Task 2.1: Change background for 30 seconds
+            document.body.style.backgroundColor = "#f0f8ff";
+            setTimeout(() => {
+                document.body.style.backgroundColor = "";
+            }, 30000);
             
-            <div class="quote">
-                <p>These extraordinary women weren't just actresses - they were pioneers who 
-                changed the face of Hollywood forever.</p>
-            </div>
-        </div>
+            // Task 5: Using DOM node properties
+            const header = document.querySelector(".header h1");
+            header.textContent = "The Greatest Hollywood Legends";
+            
+            const contentP = document.querySelector(".content-section > p");
+            contentP.innerHTML = "Welcome to our tribute to some of the <strong>greatest Hollywood legends</strong> of all time. Explore the pages to learn more about these iconic actresses who shaped the history of cinema.";
+            
+            // Task 6: Making changes using DOM methods
+            // Create new element
+            const welcomeDiv = document.createElement("div");
+            welcomeDiv.className = "welcome-banner";
+            welcomeDiv.style.backgroundColor = "rgba(139, 0, 0, 0.05)";
+            welcomeDiv.style.padding = "15px";
+            welcomeDiv.style.borderRadius = "5px";
+            welcomeDiv.style.marginBottom = "20px";
+            welcomeDiv.style.borderLeft = "5px solid darkred";
+            welcomeDiv.innerHTML = "<h2>Discover Classic Hollywood</h2><p>Explore the lives and films of famous actresses from the Golden Age of Hollywood.</p>";
+            
+            // Insert it at the beginning of content section
+            document.querySelector(".content-section").prepend(welcomeDiv);
+            
+            // Create text node
+            const newNode = document.createTextNode(" Each actress featured on this site has left an indelible mark on film history.");
+            
+            // Add it to the quote
+            document.querySelector(".quote p").appendChild(newNode);
+            
+            // Add interactive buttons
+            const buttonContainer = document.createElement("div");
+            buttonContainer.className = "interactive-buttons";
+            buttonContainer.style.display = "flex";
+            buttonContainer.style.flexWrap = "wrap";
+            buttonContainer.style.gap = "10px";
+            buttonContainer.style.margin = "20px 0";
+            buttonContainer.style.justifyContent = "center";
+            
+            buttonContainer.innerHTML = `
+                <button onclick="dialogWithUser()">Start Interactive Tour</button>
+                <button onclick="alert('Hollywood Legends celebrates the legacy of iconic actresses.')">About This Site</button>
+                <button onclick="showDeveloperInfo('Smith', 'John')">Developer Info</button>
+            `;
+            
+            document.querySelector(".content-section").appendChild(buttonContainer);
+        }
         
-        <div class="footer">
-            <span>© 2025 Hollywood Legends</span>
-        </div>
+        // Task 1.4: Function with parameters and default value
+        function showDeveloperInfo(lastName, firstName, position = "Web Developer") {
+            alert(`Page Developer:\nName: ${firstName} ${lastName}\nPosition: ${position}`);
+        }
+    </script>
+</head> 
+<body>     
+    <div class="container">         
+        <div class="nav-menu">             
+            <a href="Katharine_Hepburn.html">Katharine Hepburn</a>             
+            <a href="Bette_Davis.html">Bette Davis</a>             
+            <a href="Audrey_Hepburn.html">Audrey Hepburn</a>         
+        </div>          
+        
+        <div class="header">             
+            <h1>Hollywood Legends</h1>         
+        </div>                  
+        
+        <div class="content-section">             
+            <p>Welcome to our tribute to some of the greatest Hollywood legends of all time.
+            Explore the pages to learn more about these iconic actresses who shaped the
+            history of cinema.</p>                          
+            
+            <div class="quote">                 
+                <p>These extraordinary women weren't just actresses - they were pioneers who
+                changed the face of Hollywood forever.</p>             
+            </div>         
+        </div>                  
+        
+        <div class="footer">             
+            <span>© 2025 Hollywood Legends</span>         
+        </div>     
     </div>
-</body>
+    
+    <script>
+        // Example of using document.write for task 6
+        document.write("<div class='announcement'>Welcome to Hollywood Legends! Click the buttons above to interact with the site.</div>");
+        
+        // This will be removed after execution
+        setTimeout(() => {
+            const announcement = document.querySelector('.announcement');
+            if (announcement) {
+                announcement.remove();
+            }
+        }, 5000);
+    </script>
+</body> 
 </html>

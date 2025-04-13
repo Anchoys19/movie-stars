@@ -194,7 +194,7 @@ ol {
 /* Video container */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
     margin: 30px 0;
@@ -220,7 +220,7 @@ ol {
 }
 
 .quote:before {
-    content: "\201C";  /* Unicode for opening double quote */
+    content: "\201C";  /* Unicode для відкритя подвійних дужок в цитаті */
     font-size: 80px;
     position: absolute;
     left: 10px;
@@ -236,4 +236,101 @@ ol {
 
 h2 + p {
     font-weight: bold;
+}
+
+/* JavaScript-related styles */
+
+/* Interactive buttons */
+.interactive-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.interactive-buttons button {
+    background-color: darkred;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.interactive-buttons button:hover {
+    background-color: #b22222;
+    transform: scale(1.05);
+}
+
+/* Navigation button */
+.nav-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.nav-button:hover {
+    background-color: darkred;
+    color: white;
+}
+
+/* Info section created by JavaScript */
+.info-section {
+    background-color: rgba(139, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 3px solid darkred;
+}
+
+.info-section h3 {
+    color: darkred;
+    margin-top: 0;
+}
+
+/* Filmography highlight */
+.highlight {
+    color: darkred;
+    text-decoration: underline;
+}
+
+/* Welcome banner */
+.welcome-banner {
+    background-color: rgba(139, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 5px solid darkred;
+}
+
+.welcome-banner h2 {
+    color: darkred;
+    margin-top: 0;
+}
+
+/* Announcement */
+.announcement {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(139, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Welcome message */
+#welcomeMessage {
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgba(139, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
 }

@@ -6,17 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audrey Hepburn</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Task 1.2: Internal script
+        function changeBackground() {
+            document.body.style.backgroundColor = "#f8e6e6";
+            
+            // Task 2.1: Change background for 30 seconds
+            setTimeout(() => {
+                document.body.style.backgroundColor = "";
+                alert("Background color has been restored!");
+            }, 30000);
+        }
+        
+        // Task 1.5: Function to compare two strings 
+function compareStrings(str1, str2) {
+    // Convert both strings to lowercase for fair comparison
+    const movie1 = str1.toLowerCase();
+    const movie2 = str2.toLowerCase();
+    
+    if (str1.length > str2.length) {
+        alert(`"${str1}" has more characters (${str1.length}) than "${str2}" (${str2.length}).`);
+    } else if (str2.length > str1.length) {
+        alert(`"${str2}" has more characters (${str2.length}) than "${str1}" (${str1.length}).`);
+    } else {
+        alert(`Both "${str1}" and "${str2}" have the same length: ${str1.length} characters.`);
+    }
+    
+    // Add some context about the movies if they match Audrey's famous films
+    const audreyMovies = ["breakfast at tiffany's", "roman holiday", "my fair lady", "sabrina", "charade", "funny face"];
+    let foundMovies = [];
+    
+    if (audreyMovies.includes(movie1)) foundMovies.push(str1);
+    if (audreyMovies.includes(movie2)) foundMovies.push(str2);
+    
+    if (foundMovies.length > 0) {
+        alert(`Fun fact: ${foundMovies.join(" and ")} ${foundMovies.length > 1 ? "are" : "is"} among Audrey Hepburn's most famous films!`);
+    }
+}
+        
+        // Execute after page load
+        window.onload = function() {
+            changeBackground();
+            
+            // Task 3: Using getElementById
+            const header = document.getElementById("pageHeader");
+            header.style.color = "#8b0000";
+            
+            // Task 4: Using querySelectorAll
+            const listItems = document.querySelectorAll(".film-list li");
+            listItems.forEach(item => {
+                item.style.fontWeight = "bold";
+                item.style.color = "#4a4a4a";
+            });
+            
+            // Task 5: Using DOM node properties
+            const quoteDiv = document.querySelector(".quote");
+            quoteDiv.innerHTML = "<p>\"The most important thing is to enjoy your life - to be happy - it's all that matters.\" - <em>Audrey Hepburn</em></p>";
+            
+            const filmographyHeading = document.querySelector(".table-container h2");
+            filmographyHeading.outerHTML = "<h2 class='highlight'>Filmography Highlights</h2>";
+            
+            const textNode = document.createTextNode(" Audrey Hepburn won multiple awards throughout her career.");
+            document.querySelector(".content-section > p").appendChild(textNode);
+            
+            // Task 6: Making changes to the document
+            // Create new element
+            const infoDiv = document.createElement("div");
+            infoDiv.className = "info-section";
+            infoDiv.innerHTML = "<h3>Biography</h3><p>Born on May 4, 1929, in Brussels, Belgium, Audrey Hepburn became one of Hollywood's greatest style icons and one of the world's most beloved actresses.</p>";
+            
+            // Insert it after the main image
+            document.querySelector(".main-img-container").after(infoDiv);
+            
+            // Create text node
+            const newTextNode = document.createTextNode("She was also known for her humanitarian work with UNICEF.");
+            
+            // Insert it at the beginning of the quote div
+            quoteDiv.prepend(newTextNode);
+        }
+    </script>
+    <!-- Connect external script file for task 1.3 -->
+    <script src="dialog.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="nav-menu">
-            <a href="index.html">Home</a>
+            <button class="nav-button" onclick="location.href='index.html'">Visit Hollywood Legends Home</button>
             <a href="Katharine_Hepburn.html">Katharine Hepburn</a>
             <a href="Bette_Davis.html">Bette Davis</a>
         </div>
 
         <div class="header">
-            <h1>Audrey Hepburn</h1>
+            <h1 id="pageHeader">Audrey Hepburn</h1>
         </div>
         
         <div class="content-section">
@@ -84,14 +165,40 @@
                     title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+            
+            <!-- Buttons for task 1.1: alert, prompt, confirm -->
+            <div class="interactive-buttons">
+                <button onclick="alert('Thank you for visiting Audrey Hepburn\'s page!')">Show Message</button>
+                <button onclick="dialogWithUser()">Start Dialog</button>
+                <button onclick="compareStrings('Breakfast at Tiffany\'s', 'Roman Holiday')">Compare Movie Titles</button>
+                <button onclick="showDeveloperInfo('Ivan', 'John')">Show Developer</button>
+                <button onclick="showDeveloperInfo('Mushta', 'Anna', 'Senior Web Developer')">Show Developer with Position</button>
+            </div>
         </div>
         
         <div class="footer">
             <span>Navigation: </span>
-            <a href="index.html">Back to the main page</a> |
             <a href="Bette_Davis.html">Go to the Bette Davis page</a> |
             <a href="https://en.wikipedia.org/wiki/Audrey_Hepburn" target="_blank">Read more in Wikipedia</a>
         </div>
     </div>
+    
+    <script>
+        // Task 1.4: Function with parameters and default value
+        function showDeveloperInfo(lastName, firstName, position = "Web Developer") {
+            alert(`Page Developer:\nName: ${firstName} ${lastName}\nPosition: ${position}`);
+        }
+        
+        // Call function for initial dialog
+        document.write("<div id='welcomeMessage' style='text-align:center; margin-top:20px; background-color:rgba(139, 0, 0, 0.1); padding:10px; border-radius:5px;'>Welcome to our page about Audrey Hepburn!</div>");
+        
+        // This will be removed after execution
+        setTimeout(() => {
+            const welcomeMsg = document.getElementById('welcomeMessage');
+            if (welcomeMsg) {
+                welcomeMsg.remove();
+            }
+        }, 5000);
+    </script>
 </body>
 </html>
