@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audrey Hepburn</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="events.js"></script>
     <script>
         // Task 1.2: Internal script
-        function changeBackground() {
-            document.body.style.backgroundColor = "#f8e6e6";
+        // function changeBackground() {
+        //     document.body.style.backgroundColor = "#f8e6e6";
             
-            // Task 2.1: Change background for 30 seconds
-            setTimeout(() => {
-                document.body.style.backgroundColor = "";
-                alert("Background color has been restored!");
-            }, 30000);
-        }
+        //     // Task 2.1: Change background for 30 seconds
+        //     setTimeout(() => {
+        //         document.body.style.backgroundColor = "";
+        //         alert("Background color has been restored!");
+        //     }, 30000);
+        // }
         
         // Task 1.5: Function to compare two strings 
 function compareStrings(str1, str2) {
@@ -90,13 +91,15 @@ function compareStrings(str1, str2) {
 </head>
 <body>
     <div class="container">
+        <!-- Modify the nav-menu div to include data-* attributes -->
         <div class="nav-menu">
-            <button class="nav-button" onclick="location.href='index.html'">Visit Hollywood Legends Home</button>
-            <a href="Katharine_Hepburn.html">Katharine Hepburn</a>
-            <a href="Bette_Davis.html">Bette Davis</a>
+            <button data-action="home">Visit Hollywood Legends Home</button>
+            <button data-action="toggle-theme">Toggle Dark/Light Theme</button>
+            <a href="Katharine_Hepburn.html" data-action="info" data-actor-name="Katharine Hepburn">Katharine Hepburn</a>
+            <a href="Bette_Davis.html" data-action="info" data-actor-name="Bette Davis">Bette Davis</a>
         </div>
 
-        <div class="header">
+        <div class="header" title="Hover over me to see the mouse event handler!">
             <h1 id="pageHeader">Audrey Hepburn</h1>
         </div>
         

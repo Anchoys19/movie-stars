@@ -5,6 +5,7 @@ body {
     color: #333;
     margin: 0;
     padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* For theme switching */
 }
 
 /* Container for main content */
@@ -21,6 +22,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    transition: all 0.3s ease; /* For mouse events */
+    border: 2px solid transparent; /* For mouse event border change */
 }
 
 .header h1 {
@@ -35,6 +38,7 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
 }
 
 .nav-menu a {
@@ -43,6 +47,39 @@ body {
     padding: 5px 10px;
     border-radius: 3px;
     transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Button styling for behavior pattern */
+.nav-menu button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-menu button:hover {
+    background-color: darkred;
+}
+
+/* Behavior buttons with data attributes */
+.nav-menu button[data-action] {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-menu button[data-action]:hover {
+    background-color: #6b0000;
 }
 
 /* Pseudo-classes for links */
@@ -72,12 +109,22 @@ body {
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* For click events */
 }
 
 /* Using pseudo-class :first-child */
 .film-list li:first-child {
     font-weight: bold;
     color: darkred;
+}
+
+/* Highlighting for list items - for event delegation */
+.film-list li.highlighted {
+    background-color: rgba(139, 0, 0, 0.1);
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
 /* Main image styles */
@@ -164,6 +211,7 @@ ol {
 .film-list > li {
     color: #65645e;
     padding: 5px 0;
+    cursor: pointer; /* Indicate clickable for event delegation */
 }
 
 /* Special text */
@@ -247,6 +295,7 @@ h2 + p {
     gap: 10px;
     margin: 20px 0;
     justify-content: center;
+    transition: background-color 0.3s ease; /* For object handler */
 }
 
 .interactive-buttons button {
@@ -333,4 +382,66 @@ h2 + p {
     background-color: rgba(139, 0, 0, 0.1);
     padding: 10px;
     border-radius: 5px;
+}
+
+/* Demo list for event delegation */
+.demo-list {
+    background-color: rgba(139, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.demo-list h3 {
+    color: darkred;
+    margin-top: 0;
+}
+
+/* Dark theme support */
+body.dark-theme {
+    background-color: #333;
+    color: #eee;
+}
+
+body.dark-theme .header {
+    background-color: rgba(139, 0, 0, 0.3);
+}
+
+body.dark-theme .content-section {
+    background-color: #444;
+    color: #ddd;
+}
+
+body.dark-theme .nav-menu {
+    background-color: #222;
+}
+
+body.dark-theme .nav-menu a,
+body.dark-theme .nav-menu button {
+    background-color: #555;
+}
+
+body.dark-theme .footer {
+    background-color: #222;
+}
+
+body.dark-theme .quote,
+body.dark-theme .welcome-banner,
+body.dark-theme .info-section,
+body.dark-theme .demo-list {
+    background-color: rgba(139, 0, 0, 0.15);
+}
+
+body.dark-theme table {
+    background-color: #555;
+    color: #ddd;
+}
+
+body.dark-theme td, 
+body.dark-theme th {
+    border-color: #666;
+}
+
+body.dark-theme .film-list li.highlighted {
+    background-color: rgba(139, 0, 0, 0.3);
 }

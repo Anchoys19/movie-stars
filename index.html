@@ -7,14 +7,15 @@
     <title>Hollywood Legends</title>     
     <link rel="stylesheet" href="styles.css">
     <script src="dialog.js"></script>
+    <script src="events.js"></script>
     <script>
         // Internal script
         window.onload = function() {
             // Task 2.1: Change background for 30 seconds
-            document.body.style.backgroundColor = "#f0f8ff";
-            setTimeout(() => {
-                document.body.style.backgroundColor = "";
-            }, 30000);
+            // document.body.style.backgroundColor = "#f0f8ff";
+            // setTimeout(() => {
+            //     document.body.style.backgroundColor = "";
+            // }, 30000);
             
             // Task 5: Using DOM node properties
             const header = document.querySelector(".header h1");
@@ -68,14 +69,16 @@
     </script>
 </head> 
 <body>     
-    <div class="container">         
-        <div class="nav-menu">             
-            <a href="Katharine_Hepburn.html">Katharine Hepburn</a>             
-            <a href="Bette_Davis.html">Bette Davis</a>             
-            <a href="Audrey_Hepburn.html">Audrey Hepburn</a>         
-        </div>          
+    <div class="container">   
+        <!-- Modify the nav-menu div to include data-* attributes -->      
+        <div class="nav-menu">
+            <button data-action="toggle-theme">Toggle Theme</button>             
+            <a href="Katharine_Hepburn.html" data-action="info" data-actor-name="Katharine Hepburn">Katharine Hepburn</a>             
+            <a href="Bette_Davis.html" data-action="info" data-actor-name="Bette Davis">Bette Davis</a>             
+            <a href="Audrey_Hepburn.html" data-action="info" data-actor-name="Audrey Hepburn">Audrey Hepburn</a>         
+        </div>        
         
-        <div class="header">             
+        <div class="header" title="Hover over me to see the mouse event handler!">             
             <h1>Hollywood Legends</h1>         
         </div>                  
         
@@ -87,7 +90,18 @@
             <div class="quote">                 
                 <p>These extraordinary women weren't just actresses - they were pioneers who
                 changed the face of Hollywood forever.</p>             
-            </div>         
+            </div>    
+            
+            <div class="demo-list">
+                <h3>Demonstration of Event Delegation</h3>
+                <p>Click on any item below to highlight it:</p>
+                <ul class="film-list">
+                    <li>Golden Age of Hollywood</li>
+                    <li>Academy Award Winners</li>
+                    <li>Iconic Film Stars</li>
+                    <li>Classic Movies</li>
+                </ul>
+            </div>
         </div>                  
         
         <div class="footer">             

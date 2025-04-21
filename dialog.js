@@ -20,7 +20,7 @@ function dialogWithUser() {
     // Confirmation dialog
     let wantsFacts = confirm(`${userName}, would you like to learn some facts about Audrey Hepburn?`);
     
-    // Conditional branching based on user choice
+    // Conditional branching 
     if (wantsFacts) {
         // Array of facts for the loop
         const facts = [
