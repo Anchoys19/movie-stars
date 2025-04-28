@@ -7,16 +7,11 @@
     <title>Hollywood Legends</title>     
     <link rel="stylesheet" href="styles.css">
     <script src="dialog.js"></script>
-    <script src="events.js"></script>
+    <script src="mouse-events.js"></script>
+    <!-- <script src="events.js"></script> -->
     <script>
-        // Internal script
+        // Keep your existing window.onload function unchanged
         window.onload = function() {
-            // Task 2.1: Change background for 30 seconds
-            // document.body.style.backgroundColor = "#f0f8ff";
-            // setTimeout(() => {
-            //     document.body.style.backgroundColor = "";
-            // }, 30000);
-            
             // Task 5: Using DOM node properties
             const header = document.querySelector(".header h1");
             header.textContent = "The Greatest Hollywood Legends";

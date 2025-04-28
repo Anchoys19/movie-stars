@@ -6,7 +6,7 @@ function handleMouseEvent(event) {
     // Reset after 1 second
     setTimeout(() => {
       this.style.borderColor = "";
-    }, 1000);
+    }, 10000);
   }
   
   // 2. Object handler with handleEvent method
@@ -77,7 +77,7 @@ function handleMouseEvent(event) {
     const filmLists = document.querySelectorAll('.film-list');
     filmLists.forEach(filmList => {
       filmList.addEventListener('click', function(event) {
-        // Check if we clicked on a list item
+        // Check if we clicked on a list item (делегування)
         if (event.target.tagName === 'LI') {
           console.log('List item clicked:', event.target.textContent);
           
@@ -92,6 +92,8 @@ function handleMouseEvent(event) {
         }
       });
     });
+
+    
     
     // Part 2: Menu with data-* attributes for behavior technique
     const navMenu = document.querySelector('.nav-menu');
